@@ -7,12 +7,23 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
+    @IBOutlet var engravingLable: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+             
+        
     }
+    
+    
+    @IBAction func showEngraving(_ sender: Any) {
+        engravingLable.text = engraving
+        
+    }
+    
 
 
 }

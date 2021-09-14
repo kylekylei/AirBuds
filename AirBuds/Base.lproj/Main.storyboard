@@ -1,24 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AirBuds" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="AirPods" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Ya-Pth">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="l0b-iF-OFg">
+                                <rect key="frame" x="150" y="384" width="114" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ng4-JI-tuu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy2-Fl-dUg">
+                                <rect key="frame" x="18" y="500" width="378" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="xIn-LT-pxt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="加上鐫刻" cornerStyle="small">
+                                    <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="0.0">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="nV5-Tl-JCM" kind="show" id="lRY-p9-XXZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiO-8R-hYd">
+                                <rect key="frame" x="18" y="593" width="378" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="vB2-AJ-AEm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="顯示鐫刻" cornerStyle="small">
+                                    <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="0.0">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showEngraving:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9ZM-dj-hkl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vy2-Fl-dUg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="6wj-7b-mMB"/>
+                            <constraint firstItem="BiO-8R-hYd" firstAttribute="trailing" secondItem="Vy2-Fl-dUg" secondAttribute="trailing" id="JCr-K6-ICr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vy2-Fl-dUg" secondAttribute="trailing" constant="18" id="LtJ-Gi-1Sb"/>
+                            <constraint firstItem="BiO-8R-hYd" firstAttribute="top" secondItem="Vy2-Fl-dUg" secondAttribute="bottom" constant="25" id="OsG-zp-3p7"/>
+                            <constraint firstItem="l0b-iF-OFg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="RqW-hI-95U"/>
+                            <constraint firstItem="BiO-8R-hYd" firstAttribute="leading" secondItem="Vy2-Fl-dUg" secondAttribute="leading" id="Xyt-e6-rre"/>
+                            <constraint firstItem="MrX-Ya-Pth" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aaV-2h-DGr"/>
+                            <constraint firstAttribute="bottom" secondItem="MrX-Ya-Pth" secondAttribute="bottom" id="acl-6q-OaB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l0b-iF-OFg" secondAttribute="trailing" constant="150" id="mqz-fI-vQa"/>
+                            <constraint firstItem="Vy2-Fl-dUg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="456" id="nCL-N0-Ajg"/>
+                            <constraint firstItem="MrX-Ya-Pth" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nqH-WN-33O"/>
+                            <constraint firstAttribute="trailing" secondItem="MrX-Ya-Pth" secondAttribute="trailing" id="oho-xz-iEQ"/>
+                            <constraint firstItem="l0b-iF-OFg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="340" id="okX-1K-bUl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="engravingLable" destination="l0b-iF-OFg" id="H5M-Aq-QbS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="53.571428571428569"/>
+        </scene>
+        <!--Engraving View Controller-->
+        <scene sceneID="6zk-nb-yhG">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWL-Bo-hwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="nV5-Tl-JCM" customClass="engravingViewController" customModule="AirBuds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Can-xr-kd3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="AirPods-2" translatesAutoresizingMaskIntoConstraints="NO" id="1El-C0-u0h">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="MWs-hq-0Gj">
+                                <rect key="frame" x="135" y="225" width="144" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="rOE-gZ-Vup"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="48"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="  你的鐫刻" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xYD-p7-c64">
+                                <rect key="frame" x="42" y="473" width="330" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textInput:" destination="nV5-Tl-JCM" eventType="editingChanged" id="IPE-dK-wch"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QfT-Xw-oov"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="QfT-Xw-oov" firstAttribute="trailing" secondItem="MWs-hq-0Gj" secondAttribute="trailing" constant="135" id="3ts-Tx-1h8"/>
+                            <constraint firstAttribute="bottom" secondItem="1El-C0-u0h" secondAttribute="bottom" id="5kD-fE-gjn"/>
+                            <constraint firstAttribute="trailing" secondItem="1El-C0-u0h" secondAttribute="trailing" id="KYO-XN-mx7"/>
+                            <constraint firstItem="1El-C0-u0h" firstAttribute="top" secondItem="Can-xr-kd3" secondAttribute="top" id="PcM-1a-h9G"/>
+                            <constraint firstItem="MWs-hq-0Gj" firstAttribute="top" secondItem="QfT-Xw-oov" secondAttribute="top" constant="225" id="QmG-nK-dUS"/>
+                            <constraint firstItem="1El-C0-u0h" firstAttribute="top" secondItem="Can-xr-kd3" secondAttribute="top" id="Rya-re-8wY"/>
+                            <constraint firstAttribute="trailing" secondItem="1El-C0-u0h" secondAttribute="trailing" id="U5U-t6-Baz"/>
+                            <constraint firstItem="MWs-hq-0Gj" firstAttribute="leading" secondItem="QfT-Xw-oov" secondAttribute="leading" constant="135" id="Yeg-b2-ePJ"/>
+                            <constraint firstItem="1El-C0-u0h" firstAttribute="leading" secondItem="Can-xr-kd3" secondAttribute="leading" id="dlg-b0-3FV"/>
+                            <constraint firstItem="1El-C0-u0h" firstAttribute="leading" secondItem="Can-xr-kd3" secondAttribute="leading" id="eek-bW-tfF"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="XbX-mf-apE" appends="YES" id="zKd-oW-Q3Y"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="fTC-yB-Lc9"/>
+                    <connections>
+                        <outlet property="engravingLabel" destination="MWs-hq-0Gj" id="2WY-lg-xWJ"/>
+                        <outlet property="inputField" destination="xYD-p7-c64" id="sbP-nr-zfQ"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="XbX-mf-apE">
+                    <connections>
+                        <action selector="endEdit:" destination="nV5-Tl-JCM" id="tqN-bO-OAA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="789.85507246376812" y="53.571428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AirPods" width="750" height="1627"/>
+        <image name="AirPods-2" width="750" height="1547"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

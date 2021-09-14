@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D653CBF26EF9D9D00778D1E /* engravingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D653CBE26EF9D9D00778D1E /* engravingViewController.swift */; };
 		9DF67FAE26EF901B00DCD195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF67FAD26EF901B00DCD195 /* AppDelegate.swift */; };
 		9DF67FB026EF901B00DCD195 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF67FAF26EF901B00DCD195 /* SceneDelegate.swift */; };
 		9DF67FB226EF901B00DCD195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF67FB126EF901B00DCD195 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D653CBE26EF9D9D00778D1E /* engravingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = engravingViewController.swift; sourceTree = "<group>"; };
 		9DF67FAA26EF901B00DCD195 /* AirBuds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirBuds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF67FAD26EF901B00DCD195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DF67FAF26EF901B00DCD195 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				9DF67FAF26EF901B00DCD195 /* SceneDelegate.swift */,
 				9DF67FB126EF901B00DCD195 /* ViewController.swift */,
 				9DF67FB326EF901B00DCD195 /* Main.storyboard */,
+				9D653CBE26EF9D9D00778D1E /* engravingViewController.swift */,
 				9DF67FB626EF901D00DCD195 /* Assets.xcassets */,
 				9DF67FB826EF901D00DCD195 /* LaunchScreen.storyboard */,
 				9DF67FBB26EF901D00DCD195 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D653CBF26EF9D9D00778D1E /* engravingViewController.swift in Sources */,
 				9DF67FB226EF901B00DCD195 /* ViewController.swift in Sources */,
 				9DF67FAE26EF901B00DCD195 /* AppDelegate.swift in Sources */,
 				9DF67FB026EF901B00DCD195 /* SceneDelegate.swift in Sources */,
@@ -305,7 +309,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
